@@ -1,19 +1,30 @@
-let nome = prompt("Digite o seu nome: ")
+function saudarUser() {
+    const apenasLetras = /^[a-zA-ZÀ-ÿ\s]+$/;
+    let nome;
 
-function saudarUser(nome){
+    while (true) {
+        nome = prompt("Digite o seu nome:");
 
-    const apenasLetras = /^[a-zA-ZÀ-ÿ\s]+$/
+        if (nome === null) {
+            return;
+        }
 
-    while(nome === "" || nome === null || nome.length <= 3 || !apenasLetras.test(nome)){
-        alert("Nome insuficiente, nome não informado ou contem numeros")
-        nome = prompt("Digite o seu nome novamente: ")
+        nome = nome.trim();
 
-        if (nome === null) break
+        if (nome.length <= 3) {
+            alert("Nome muito curto.");
+            continue;
+        }
+
+        if (!apenasLetras.test(nome)) {
+            alert("O nome deve conter apenas letras.");
+            continue;
+        }
+
+        break;
     }
 
-    if(nome){
-        alert(`Olá ${nome}, seja bem-vindo!`)
-    }
+    alert(`Olá ${nome}, seja bem-vindo!`);
 }
 
-saudarUser(nome)
+saudarUser();
