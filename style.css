@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&family=Ultra&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Courier Prime", monospace;
+    color: #3E2723;
+    background-color: #F5F5DC;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3E2723;
+    color: #F5F5DC;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D2B48C;
+}
+
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+section h2 {
+    font-family: "Special Elite", serif;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8B4513;
+    display: inline-block;
+}
+
+section p {
+    text-align: justify;
+}
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+
+#produtos article {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.5s ease-out;
+}
+
+#produtos article:hover{
+    transform: translateY(-5px);
+}
+
+#produtos article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#produtos article h3 {
+    margin-top: 15px;
+    font-family: "Special Elite";
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #3E2723;
+    color: #F5F5DC;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-img {
+        height: 250px;
+    }
+
+    section p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
